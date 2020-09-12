@@ -102,6 +102,7 @@ function internQuestions(employee) {
 
 // Render HTML
 function renderHTML() {
+    console.log(allEmployees)
     fs.writeFile(outputPath, render(allEmployees), (err) => console.log(err))
 }
 
@@ -143,7 +144,7 @@ async function filterEmployee() {
                 writeManager(employee)
                 break;
             case 'Intern':
-                writeManager(employee)
+                writeIntern(employee)
                 break;
         }
 
@@ -170,8 +171,8 @@ async function filterEmployee() {
 // Write Manager
 async function writeManager(employee) {
     try {
-        const employeeRes = await employeeQuestions()
-        const managerRes = await managerQuestions()
+        const employeeRes = await employeeQuestions(employee)
+        const managerRes = await managerQuestions(employee)
 
         const newManager = new Manager(employeeRes.name, employeeRes.id, employeeRes.email, managerRes.office)
 
