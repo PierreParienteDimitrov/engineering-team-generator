@@ -8,8 +8,9 @@ Depending on the employee that the user decided to create, he will be asked a se
 
 When all employees have been created and the user decides to not create another one, then the webpage is created with the relevant information.
 
-Here is the link to the [GitHub Pages](https://pierreparientedimitrov.github.io/engineering-team-generator/)
 Here is the link to the [Repository](https://github.com/PierreParienteDimitrov/engineering-team-generator)
+
+![team page](./Assets/img1.png)
 
 ## Table of Contents
 
