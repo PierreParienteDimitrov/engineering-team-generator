@@ -74,7 +74,7 @@ function managerQuestions(employee) {
     return questions
 }
 
-// Manager questions 
+// Engineer questions 
 function engineerQuestions(employee) {
     const questions = inquirer.prompt([
         {
@@ -148,19 +148,6 @@ async function filterEmployee() {
                 break;
         }
 
-        // console.log(employee)
-
-        // const engineer = employeeArr.filter(item => item === employee)
-        // const intern = employeeArr.filter(item => item === employee)
-        // const manager = employeeArr.filter(item => item === employee)
-
-        // if (engineer.length === 1) {
-        //     writeEngineer(employee)
-        // } else if (intern.length === 1) {
-        //     writeIntern(employee)
-        // } else if (manager.length === 1) {
-        //     writeManager(employee)
-        // }
     }
 
     catch (err) {
@@ -212,7 +199,7 @@ async function writeIntern(employee) {
         const employeeRes = await employeeQuestions(employee)
         const internRes = await internQuestions(employee)
 
-        const newIntern = new Intern(employeeRes.name, employeeRes.id, employeeRes.email, internRes.github)
+        const newIntern = new Intern(employeeRes.name, employeeRes.id, employeeRes.email, internRes.school)
 
         allEmployees.push(newIntern)
 
